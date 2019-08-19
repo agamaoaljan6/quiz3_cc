@@ -3,7 +3,7 @@ class CreateAuctions < ActiveRecord::Migration[5.2]
     create_table :auctions do |t|
       t.string :title
       t.text :description
-      t.date :expiration_date
+      t.datetime :expiration_date
       t.float :price
 
       t.timestamps
