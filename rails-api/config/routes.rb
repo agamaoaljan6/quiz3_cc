@@ -7,8 +7,8 @@ Rails.application.routes.draw do
         end
         resource :session, only: [:create, :destroy]
 
-        resources :auctions, only: [:index, :show, :create] do
-          resources :bids, only: :create
+        resources :users, only: [:create] do
+          get :current, on: :collection
         end
     end
 end

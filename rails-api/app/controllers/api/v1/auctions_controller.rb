@@ -12,7 +12,8 @@ class Api::V1::AuctionsController < Api::ApplicationController
   
     def show
       render(
-        json: @auction
+        json: @auction,
+        include: :bids
       )
     end
   
