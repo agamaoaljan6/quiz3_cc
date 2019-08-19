@@ -16,4 +16,9 @@ class User < ApplicationRecord
       uniqueness: true,
       format: /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
     )   
+
+    validates(
+      :password,
+      length: { minimum: 5 }
+    )
   end
